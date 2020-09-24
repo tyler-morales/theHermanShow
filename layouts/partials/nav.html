@@ -1,5 +1,5 @@
 <nav>
-    <span class=home><a href="/">Tmo</a></span>
+    <span class='home'><a href="/">The Herman Radio Network</a></span>
 
     <button class="hamburger hamburger--collapse" type="button" aria-controls=menu aria-expanded=false>
         <span class="hamburger-box">
@@ -9,7 +9,10 @@
 
     <ul id=menu>
         {{ range .Site.Sections }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+        {{ range where .Site.RegularPages "Type" "page" }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
     </ul>
 

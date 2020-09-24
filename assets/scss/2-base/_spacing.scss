@@ -1,3 +1,8 @@
-p:not(:last-child){
+p:not(:last-child) {
     margin-bottom: 20px;
+}
+
+body {
+    max-width: 90vw;
+    margin: 0 auto;
 }

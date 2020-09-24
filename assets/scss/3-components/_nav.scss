@@ -6,8 +6,6 @@ nav {
   grid-template-areas:
     "togglebutton logo"
     "navigation navigation";
-  border-bottom: 2px solid var(--color-secondary);
-  margin: 20px 30px;
   padding: 20px 0;
   z-index: 10;
 
@@ -22,7 +20,6 @@ nav {
     margin: 0;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
-
 
     li {
       text-align: center;
@@ -46,7 +43,7 @@ nav {
     a:hover,
     a.active {
       background-color: black;
-      color: var(--color-primary);
+      color: white;
       transition: all .3s;
     }
   }
@@ -63,36 +60,24 @@ nav {
     }
   }
 
-  span.home {
+  .home {
     font-size: 1.5rem;
     font-weight: 700;
     margin-right: auto;
-    background-color: var(--color-primary);
+    transition: all .3s ease-in-out;
 
-    a,
-    a:link,
-    a:active,
-    a:visited {
-      border: 1px solid black;
-      padding: 5px 10px;
-    }
-
-    a:hover {
-      background-color: black;
-      color: white;
+    &:hover {
+      color: blue;
       cursor: pointer;
       transition: all .3s;
     }
   }
-
-  border: 2px dotted green;
 
   @media (min-width: 769px) {
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
-    border: 2px dotted purple;
 
     ul {
       display: flex;
