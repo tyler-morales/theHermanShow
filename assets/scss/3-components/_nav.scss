@@ -1,0 +1,123 @@
+nav {
+  align-items: center;
+  background-color: var(--color-primary);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "togglebutton logo"
+    "navigation navigation";
+  border-bottom: 2px solid var(--color-secondary);
+  margin: 20px 30px;
+  padding: 20px 0;
+  z-index: 10;
+
+  button {
+    justify-self: end;
+  }
+
+  ul {
+    display: grid;
+    grid-area: navigation;
+    height: 0px;
+    margin: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+
+
+    li {
+      text-align: center;
+
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          opacity: 0;
+          transition: opacity 0.2s #{$i * 0.1}s ease-in;
+        }
+      }
+    }
+
+    a,
+    a:link,
+    a:active,
+    a:visited {
+      font-size: 18px;
+      padding: 10px 15px;
+    }
+
+    a:hover,
+    a.active {
+      background-color: black;
+      color: var(--color-primary);
+      transition: all .3s;
+    }
+  }
+
+  [aria-expanded="true"]~ul {
+    height: 150px; //height of menu
+
+    li {
+      opacity: 1;
+    }
+
+    @media (min-width: 769px) {
+      padding: 0;
+    }
+  }
+
+  span.home {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: auto;
+    background-color: var(--color-primary);
+
+    a,
+    a:link,
+    a:active,
+    a:visited {
+      border: 1px solid black;
+      padding: 5px 10px;
+    }
+
+    a:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      transition: all .3s;
+    }
+
+  }
+
+  @media (min-width: 769px) {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+    button {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      height: initial;
+      opacity: 1;
+
+      li:nth-child(-n + 6) {
+        opacity: 1;
+      }
+
+      a,
+      a:link,
+      a:active,
+      a:visited {
+        display: inline-block;
+        margin-left: 20px;
+        // padding: 10px 15px;
+      }
+    }
+
+    // span.home {
+    //     margin-left: initial;
+    // }
+  }
+}

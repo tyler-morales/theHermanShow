@@ -1,0 +1,12 @@
+<div class="prevNext">
+    <a class="prevNext--top" href="#" class="scroll-up">Back to top</a>
+
+    <div id="page-controls" class="prevNext__controls">
+        {{ if .NextInSection }}
+        <a href="{{.NextInSection.Permalink}}">⏪ Previous Project </a>
+        {{ end }}
+        {{ if .PrevInSection }}
+        <a href="{{.PrevInSection.Permalink}}">Next Project ⏩</a>
+        {{ end }}
+    </div>
+</div> 

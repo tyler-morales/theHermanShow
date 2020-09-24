@@ -1,0 +1,32 @@
+.link {
+    cursor: pointer;
+    width: max-content;
+
+    &--view-project {
+        @extend .link;
+        color: var(--color-link);
+        font-size: 17px;
+        display: flex;
+    }
+
+    &--learn-more{
+        color: var(--color-link);
+    }
+}
+
+.prevNext {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    &--top {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    &__controls {
+        display: flex;
+    }
+}

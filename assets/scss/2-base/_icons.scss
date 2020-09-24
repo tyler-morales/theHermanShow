@@ -1,0 +1,37 @@
+.icon {
+    width: 48px;
+    height: 48px;
+    fill: currentColor;
+    transition: all .3s;
+
+    &--social {
+        @extend .icon;
+    }
+
+    &--external-link {
+        @extend .icon;
+        position: absolute;
+        top: 14px;
+        right: 35px;
+        top: 17px;
+        right: 17px;
+        fill: var(--color-tertiary);
+        width: 24px;
+        height: 24px;
+        transition: all .3s;
+    }
+
+    &--arrow-right {
+        @extend .icon;
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    &--arrow-left {
+        @extend .icon;
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+}
