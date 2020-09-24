@@ -83,18 +83,16 @@ nav {
       cursor: pointer;
       transition: all .3s;
     }
-
   }
+
+  border: 2px dotted green;
 
   @media (min-width: 769px) {
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
-
-    button {
-      display: none;
-    }
+    border: 2px dotted purple;
 
     ul {
       display: flex;
@@ -112,12 +110,7 @@ nav {
       a:visited {
         display: inline-block;
         margin-left: 20px;
-        // padding: 10px 15px;
       }
     }
-
-    // span.home {
-    //     margin-left: initial;
-    // }
   }
 }
