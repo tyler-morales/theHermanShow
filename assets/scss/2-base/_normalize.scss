@@ -13,6 +13,11 @@ body {
     background-color: var(--background);
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 ul,
 li {
     list-style-type: none;

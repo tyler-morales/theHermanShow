@@ -2,15 +2,13 @@
     cursor: pointer;
     width: max-content;
 
-    &--view-project {
+    &--cta {
         @extend .link;
-        color: var(--color-link);
-        font-size: 17px;
-        display: flex;
-    }
-
-    &--learn-more{
-        color: var(--color-link);
+        color: white;
+        background-color: var(--color-primary);
+        height: min-content;
+        padding: 12px 25px;
+        border-radius: 10px;
     }
 }
 
