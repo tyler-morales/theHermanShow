@@ -9,6 +9,11 @@
         height: min-content;
         padding: 12px 25px;
         border-radius: 10px;
+        transition: all .3s;
+
+        &:hover {
+            background-color: var(--color-primary-dark);
+        }
     }
 }
 
