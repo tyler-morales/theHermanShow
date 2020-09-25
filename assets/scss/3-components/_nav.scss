@@ -1,27 +1,30 @@
 nav {
-  align-items: center;
-  background-color: var(--color-primary);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "togglebutton logo"
-    "navigation navigation";
-  padding: 20px 0;
-  z-index: 10;
+  margin-top: 20px;
+  margin-bottom: 40px;
 
-  button {
+  // hamburger menu icon
+  .hamburger {
     justify-self: end;
   }
 
-  ul {
+  // mobile first
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "togglebutton logo"
+  "navigation navigation";
+  z-index: 10;
+
+  // routes
+  .nav__items {
     display: grid;
     grid-area: navigation;
-    height: 0px;
+    height: 0;
     margin: 0;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
 
-    li {
+    &--item {
       text-align: center;
 
       @for $i from 1 through 6 {
@@ -36,23 +39,20 @@ nav {
     a:link,
     a:active,
     a:visited {
+      width: 100%;
       font-size: 18px;
       padding: 10px 15px;
-    }
-
-    a:hover,
-    a.active {
-      background-color: black;
-      color: white;
-      transition: all .3s;
+      display: inline-block;
     }
   }
 
-  [aria-expanded="true"]~ul {
-    height: 150px; //height of menu
+  // hamburger menu expanded
+  [aria-expanded="true"]~.nav__items {
+    height: 240px; //height of menu
 
     li {
       opacity: 1;
+      border-bottom: 1px solid var(--color-gray-light);
     }
 
     @media (min-width: 769px) {
@@ -60,30 +60,34 @@ nav {
     }
   }
 
-  .home {
+  .logo {
     font-size: 1.5rem;
     font-weight: 700;
     margin-right: auto;
     transition: all .3s ease-in-out;
 
     &:hover {
-      color: blue;
-      cursor: pointer;
-      transition: all .3s;
+      color: var(--color-primary);
     }
   }
 
+  // larger screens
   @media (min-width: 769px) {
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-gray-light);
 
-    ul {
+    // routes
+    .nav__items {
       display: flex;
       justify-content: flex-end;
       height: initial;
       opacity: 1;
+      gap: 20px;
 
       li:nth-child(-n + 6) {
         opacity: 1;
@@ -93,8 +97,13 @@ nav {
       a:link,
       a:active,
       a:visited {
-        display: inline-block;
-        margin-left: 20px;
+        padding: 0 15px;
+      }
+
+      a:hover {
+        background-color: var(--color-primary);
+        color: white;
+        transition: all .3s;
       }
     }
   }

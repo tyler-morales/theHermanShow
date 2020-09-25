@@ -12,6 +12,7 @@ li,
 figcaption,
 a {
     font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
 }
 
 h1 {
@@ -51,6 +52,7 @@ h3 {
         font-size: 26px;
         line-height: 28px;
     }
+
     @include breakpoint(sm) {
         font-size: 21px;
         line-height: 28px;
@@ -104,9 +106,4 @@ ul {
 
 li {
     font-size: 21px;
-}
-
-.project-type {
-    color: var(--color-tertiary);
-    font-size: 14px;
 }
