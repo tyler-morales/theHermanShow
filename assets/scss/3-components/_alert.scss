@@ -1,0 +1,11 @@
+.alert {
+  background-color: var(--color-primary);
+  text-align: center;
+  width: 100vw;
+  padding: 5px 0;
+
+  span {
+    display: inline-block;
+    color: white;
+  }
+}

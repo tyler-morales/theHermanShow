@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
 body {
     background-color: var(--background);
 }

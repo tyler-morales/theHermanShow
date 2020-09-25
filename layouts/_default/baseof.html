@@ -1,8 +1,12 @@
 {{ partial "head" . }}
-{{ partial "nav" .}}
+{{ partial "alert"}}
 
-{{ block "main" . }}
+<div class="container">
+  {{ partial "nav" .}}
 
-{{ end }}
+  {{ block "main" . }}
 
-{{ partial "footer"}}
+  {{ end }}
+
+  {{ partial "footer"}}
+</div>
