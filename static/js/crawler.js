@@ -17,8 +17,13 @@ nightmare
     //loop through and extract info from each episode into an object
     let data = episodes.map((episode, i) => {
       let index = ++i
-      let title = episode.querySelector('.soundTitle__title span').innerText
-      let date = episode.querySelector('.relativeTime').title.slice(10)
+      let rawTitle = episode.querySelector('.soundTitle__title span').innerText
+      let title = rawTitle.split(" (")[0];
+      let rawDate = episode.querySelector('.relativeTime').title.slice(10)
+      let day = rawDate.split(' ')[0]
+      let month = rawDate.split(' ')[1]
+      let year = rawDate.split(' ')[2]
+      let date = `${month} ${day}, ${year}`
       let link = episode.querySelector('a.soundTitle__title').href
 
       return {
