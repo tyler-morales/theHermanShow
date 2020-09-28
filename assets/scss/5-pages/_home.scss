@@ -24,10 +24,10 @@ header {
   .hero__img {
     background-image: url("/images/hero-img.jpg");
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 500px;
     width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -151,4 +151,47 @@ main {
       }
     }
   }
+}
+
+.newsletter {
+  // background-color: var(--color-primary);
+  background-image: url("/images/radio-bg.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+
+  form {
+    text-align: center;
+    max-width: 700px;
+    padding: 30px;
+
+    h3 {
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    p {
+      color: white;
+    }
+
+    input {
+      width: 100%/2;
+      font-size: 21px;
+      padding: 15px 25px;
+
+      @include breakpoint(sm) {
+        width: 100%
+      }
+    }
+  }
+}
+
+.input--submit {
+  background-color: var(--color-primary);
+  color: White;
+
+  &:focus {
+    outline: 2px solid white;
+}
 }
