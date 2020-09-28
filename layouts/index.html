@@ -22,7 +22,7 @@
         />
         <div class="recent-episodes__episodes__episode__text">
           <span class="date">{{ .date }}</span>
-          <h4 class="episode-title">{{ .title }}</h4>
+          <h4 {{if gt (len .title) 50}} class="long-title"{{end}}  class="episode-title">{{ .title }}</h4>
           <a class="link--sc" href="{{.link}}">SoundCloud</a>
         </div>
       </li>
