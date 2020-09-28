@@ -3,18 +3,26 @@ nav {
   margin-bottom: 40px;
   background-color: var(--background);
 
+  .nav {
+    display: flex;
+    width: 100%;
+
+    @include breakpoint(md) {
+      // mobile first
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "togglebutton logo"
+        "navigation navigation";
+      z-index: 10;
+    }
+  }
+
   // hamburger menu icon
   .hamburger {
     justify-self: end;
   }
 
-  // mobile first
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "togglebutton logo"
-  "navigation navigation";
-  z-index: 10;
 
   // routes
   .nav__items {
@@ -85,7 +93,7 @@ nav {
     // routes
     .nav__items {
       display: flex;
-      justify-content: flex-end;
+      // justify-content: flex-end;
       height: initial;
       opacity: 1;
       gap: 20px;
