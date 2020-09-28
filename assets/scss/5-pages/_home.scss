@@ -101,6 +101,7 @@ main {
 }
 
 .as-seen-on {
+  text-align: center;
   &__outlets {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
