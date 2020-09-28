@@ -6,15 +6,65 @@
     <p>A Talk & Music Radio Show</p>
   </h1>
   <div class="hero__img">
-    <a class='link--cta cta' href="/listen">Listen Now</a>
+    <a class="link--cta cta" href="/listen">Listen Now</a>
   </div>
 </header>
 
+<main>
+  <section class="recent-episodes">
+    <h2 class="container">Recent Episodes</h2>
+    <ol class="container recent-episodes__episodes">
+      {{ range $.Site.Data.episodes }}
+      <li class="recent-episodes__episodes__episode">
+        <img
+          src="https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg"
+          alt="Cover Art"
+        />
+        <div class="recent-episodes__episodes__episode__text">
+          <span class="date">{{ .date }}</span>
+          <h4 class="episode-title">{{ .title }}</h4>
+          <a class="link--sc" href="{{.link}}">SoundCloud</a>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
 
+  <section class="container as-seen-on">
+    <h2>As Seen On</h2>
 
+    <div class="as-seen-on__outlets container">
+      <img
+        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
+        alt=""
+      />
+      <img
+        src="https://madebymarycommunity.org/wp-content/uploads/2019/01/DailyHerald-logo.png"
+        alt=""
+      />
+      <img
+        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
+        alt=""
+      />
+      <img
+        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
+        alt=""
+      />
+    </div>
+  </section>
+</main>
 
-
-{{/*  News letter image
-<span>Photo by <a href="https://unsplash.com/@sasotusar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sašo Tušar</a> on <a href="https://unsplash.com/s/photos/radio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-  2*/}}
-{{ end }}
+{{/* News letter image
+<span
+  >Photo by
+  <a
+    href="https://unsplash.com/@sasotusar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+    >Sašo Tušar</a
+  >
+  on
+  <a
+    href="https://unsplash.com/s/photos/radio?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+    >Unsplash</a
+  ></span
+>
+2*/}} {{ end }}

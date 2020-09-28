@@ -15,6 +15,19 @@
             background-color: var(--color-primary-dark);
         }
     }
+
+    &--sc {
+        @extend .link;
+        color: white;
+        background-color: #FF5722;
+        padding: 2px 15px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 0 #C40000;
+
+        @include breakpoint(sm) {
+            width: 100%;
+        }
+    }
 }
 
 .prevNext {
