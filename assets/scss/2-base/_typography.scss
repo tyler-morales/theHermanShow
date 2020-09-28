@@ -35,6 +35,11 @@ h2 {
     font-size: 36px;
     line-height: 35px;
     margin-bottom: 15px;
+
+    @include breakpoint(sm) {
+        font-size: 21px;
+        line-height: 28px;
+    }
 }
 
 h3 {

@@ -14,15 +14,12 @@
   <section class="recent-episodes">
     <h2 class="container">Recent Episodes</h2>
     <ol class="container recent-episodes__episodes">
-      {{ range first 4 $.Site.Data.episodes }}
+      {{ range first 6 $.Site.Data.episodes }}
       <li class="recent-episodes__episodes__episode">
-        <img
-          src="https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg"
-          alt="Cover Art"
-        />
+        <img src="https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg" alt="Cover Art" />
         <div class="recent-episodes__episodes__episode__text">
           <span class="date">{{ .date }}</span>
-          <h4 {{if gt (len .title) 50}} class="long-title"{{end}}  class="episode-title">{{ .title }}</h4>
+          <h4 class="episode-title">{{ .title }}</h4>
           <a class="link--sc" href="{{.link}}">SoundCloud</a>
         </div>
       </li>
@@ -34,22 +31,29 @@
     <h2>As Seen On</h2>
 
     <div class="as-seen-on__outlets container">
-      <img
-        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
-        alt=""
-      />
-      <img
-        src="https://madebymarycommunity.org/wp-content/uploads/2019/01/DailyHerald-logo.png"
-        alt=""
-      />
-      <img
-        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
-        alt=""
-      />
-      <img
-        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
-        alt=""
-      />
+      <img src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png" alt="" />
+      <img src="https://madebymarycommunity.org/wp-content/uploads/2019/01/DailyHerald-logo.png" alt="" />
+      <img src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png" alt="" />
+      <img src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png" alt="" />
+    </div>
+  </section>
+
+  <section class="container stats">
+    <h2>By the Numbers</h2>
+
+    <div class="stats__container">
+      <div class="stats__container__item">
+        <span class="number">7+</span>
+        <span class="text">Years in Radio</span>
+      </div>
+      <div class="stats__container__item">
+        <span class="number">100+</span>
+        <span class="text">Interviews</span>
+      </div>
+      <div class="stats__container__item">
+        <span class="number">$600</span>
+        <span class="text">Raised for WLTL</span>
+      </div>
     </div>
   </section>
 </main>
