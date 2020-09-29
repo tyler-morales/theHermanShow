@@ -63,3 +63,31 @@ main {
     }
   }
 }
+
+.about-team {
+  h2 {
+    text-align: center;
+  }
+
+  &__grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 980px;
+  }
+
+  &__member {
+    text-align: center;
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
+}
