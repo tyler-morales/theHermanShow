@@ -35,42 +35,13 @@
   <section class="about-team container">
     <h2>The Team</h2>
     <div class="about-team__grid">
+      {{ range .Params.team }}
       <div class="about-team__member">
         <img src="https://picsum.photos/300/200" alt="">
-        <h4>Tyler Morales</h4>
-        <h6>Web Developer & Photographer</h6>
+        <h4>{{ .name }}</h4>
+        <h6>{{ .job }}</h6>
       </div>
-      <div class="about-team__member">
-        <img src="https://picsum.photos/300/200" alt="">
-        <h4>Tyler Morales</h4>
-        <h6>Web Developer & Photographer</h6>
-      </div>
-      <div class="about-team__member">
-        <img src="https://picsum.photos/300/200" alt="">
-        <h4>Tyler Morales</h4>
-        <h6>Web Developer & Photographer</h6>
-      </div>
-      <div class="about-team__member">
-        <img src="https://picsum.photos/300/200" alt="">
-        <h4>Tyler Morales</h4>
-        <h6>Web Developer & Photographer</h6>
-      </div>
-      <div class="about-team__member">
-        <img src="https://picsum.photos/300/200" alt="">
-        <h4>Tyler Morales</h4>
-        <h6>Web Developer & Photographer</h6>
-      </div>
-      <div class="about-team__member">
-        <img src="https://picsum.photos/300/200" alt="">
-        <h4>Tyler Morales</h4>
-        <h6>Web Developer & Photographer</h6>
-      </div>
-      <div class="about-team__member">
-        <img src="https://picsum.photos/300/200" alt="">
-        <h4>Tyler Morales</h4>
-        <h6>Web Developer & Photographer</h6>
-      </div>
-    </div>
+      {{ end }}
   </section>
 </main>
 {{ end }}
