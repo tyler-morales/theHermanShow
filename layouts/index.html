@@ -42,26 +42,20 @@
     <h2>By the Numbers</h2>
 
     <div class="stats__container">
+      {{ range .Params.stats }}
       <div class="stats__container__item">
-        <span class="number">7+</span>
-        <span class="text">Years in Radio</span>
+        <span class="number">{{ .number}} </span>
+        <span class="text">{{ .title }}</span>
       </div>
-      <div class="stats__container__item">
-        <span class="number">100+</span>
-        <span class="text">Interviews</span>
-      </div>
-      <div class="stats__container__item">
-        <span class="number">$600</span>
-        <span class="text">Raised for WLTL</span>
-      </div>
+      {{ end }}
     </div>
   </section>
 
   <section class="newsletter">
     <form class="container">
-      <h3 onclick="submit()">Sign up for our Monthly Newsletter</h3>
-      <p>Get bi-monthly emails about what’s going on inside the Herman Radio Network, any events and the latest upcoming
-        shows</p>
+      <h3>Sign up for our Monthly Newsletter</h3>
+      <p>{{ .Params.newsletter }}
+      </p>
 
       <label for="email">
         <input id="email" name="email" required="" type="email" placeholder="Email">
