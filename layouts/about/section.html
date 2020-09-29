@@ -5,16 +5,8 @@
     <div class="about__hero">
       <div class=" about__hero__text container">
         <h1 class='title'>About the Herman Show</h1>
-        <h2 class='sub-title'>Mustache lo-fi before they sold outsustainable intelligentsia la croix 90’staiyaki iceland
-          cray woke</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed
-          diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          diam</p>
+        <h2 class='sub-title'>{{.Params.subTitle}}</h2>
+        <p>{{.Params.description}}</p>
       </div>
     </div>
   </section>
@@ -25,9 +17,7 @@
       <img src="/images/brandonHerman.jpg" alt="Profile image of Brandon Herman">
       <div class="about-host__grid__text">
         <h2>Brandon Herman</h2>
-        <p>I’m baby taiyaki next level gluten-free, polaroid hashtag streetart mumblecore farm-to-table quinoa
-          typewriter salvia. Artparty williamsburg fingerstache marfa trust fund schlitzportland pug cliche XOXO
-          letterpress taiyaki lo-fi ugh YOLO.</p>
+        <p>{{.Params.host_bio}}</p>
       </div>
     </div>
   </section>
@@ -44,8 +34,8 @@
       {{ end }}
   </section>
 
-  <section class="contact container">
-    <h2>Contact Us</h2>
+  <section class="about-contest container">
+    <h2>Contest Rules</h2>
     <a href='/docs/contest_rules.pdf' target='_blank' class='link--cta'>View Contest Rules</a>
   </section>
 </main>
