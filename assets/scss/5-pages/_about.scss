@@ -1,3 +1,12 @@
+main {
+  display: grid;
+  gap: 150px;
+
+  @include breakpoint(sm) {
+    gap: 50px;
+  }
+}
+
 .about {
   &__hero {
     background-image: url('/images/studio.webp');
@@ -21,11 +30,6 @@
         margin-top: 20px;
       }
 
-      .title {
-        // font-size: 72px;
-        // line-height: 72px;
-      }
-
       .sub-title {
         font-weight: 400;
         grid-column: 1;
@@ -41,6 +45,21 @@
       p {
         color: white;
       }
+    }
+  }
+}
+
+.about-host {
+
+  &__grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: end;
+
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
     }
   }
 }
