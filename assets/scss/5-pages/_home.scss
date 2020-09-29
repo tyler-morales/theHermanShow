@@ -1,4 +1,10 @@
 header {
+  margin-top: 60px;
+
+  @include breakpoint(sm) {
+    margin-top: 40px;
+  }
+
   .heading__title {
     display: flex;
     flex-direction: column;
@@ -193,5 +199,5 @@ main {
 
   &:focus {
     outline: 2px solid white;
-}
+  }
 }

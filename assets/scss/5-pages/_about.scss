@@ -1,0 +1,46 @@
+.about {
+  &__hero {
+    background-image: url('/images/studio.webp');
+    min-height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint(md) {
+      background-position: right;
+    }
+
+    &__text {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 40px 0;
+
+      @include breakpoint(md) {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+      }
+
+      .title {
+        // font-size: 72px;
+        // line-height: 72px;
+      }
+
+      .sub-title {
+        font-weight: 400;
+        grid-column: 1;
+        line-height: 50px;
+      }
+
+      p {
+        grid-column: 1;
+      }
+
+      h1,
+      h2,
+      p {
+        color: white;
+      }
+    }
+  }
+}

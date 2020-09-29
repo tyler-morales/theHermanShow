@@ -13,9 +13,6 @@
             {{ range .Site.Sections }}
             <li class='nav__items--item'><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
             {{ end }}
-            {{ range where .Site.RegularPages "Type" "page" }}
-            <li class='nav__items--item'><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-            {{ end }}
         </ul>
     </div>
 
