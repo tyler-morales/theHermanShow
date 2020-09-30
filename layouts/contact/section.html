@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main>
+  <section class="contact container">
+    <form id="form-contact" class="form" name="submit-to-google-sheet">
+
+      <label for="name">Full Name</label>
+      <div class="name">
+        <input type="text" placeholder="First" title="First" name="firstName" id="name" required>
+        <input type="text" placeholder="Last" title="Last" name="lastName" id="name" required>
+      </div>
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="johndoe@manifestledger.com" name="email" novalidate="" id="email" required>
+
+      <label for="message">Message</label>
+      <textarea placeholder="Enter your message" title="message" name="message" id="message"></textarea>
+
+      <button type="submit" id="submit-button" class="link--cta">Submit</button>
+
+    </form>
+  </section>
+</main>
+{{ end }}

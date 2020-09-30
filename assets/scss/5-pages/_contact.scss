@@ -1,0 +1,58 @@
+form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 100%;
+
+  // @media (max-width:1000px) {
+  //   width: auto;
+  // }
+
+  .name {
+    display: flex;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+
+    input {
+      // width: 50%;
+
+      // @include breakpoint(sm) {
+      //   width: 100%;
+      // }
+    }
+  }
+
+  .btn {
+    margin-top: 35px;
+
+    @include breakpoint(sm) {
+      margin-top: 25px;
+    }
+  }
+}
+
+input {
+  border-bottom: 1px solid gray;
+  margin: 5px 0 27px 0;
+  padding: 10px 0;
+  background-color: inherit;
+  font-size: 21px;
+
+  @include breakpoint(sm) {
+    margin: 11px 0 27px 0;
+  }
+}
+
+textarea {
+  margin-top: 20px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  min-height: 237px;
+  padding: 20px;
+  resize: none;
+}
