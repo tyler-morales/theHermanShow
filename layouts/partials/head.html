@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
     <link href="assets/scss/3-components/_hamburger.scss" rel="stylesheet">
 
+    <link href='https://css.gg/signal.css' rel='stylesheet'>
     <!-- sass -->
     {{ $scss := resources.Get "scss/main.scss" }}
     {{ $style := $scss | toCSS | minify | fingerprint }}

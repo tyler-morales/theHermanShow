@@ -61,8 +61,12 @@ h4 {
     line-height: 26px;
     font-weight: 400;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
         font-size: 18px;
+        line-height: 20px;
+    }
+    @include breakpoint(sm) {
+        font-size: 15px;
         line-height: 20px;
     }
 }

@@ -69,8 +69,13 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px 100px;
 
+    @include breakpoint(md) {
+      gap: 50px 40px;
+    }
+
     @include breakpoint(sm) {
       grid-template-columns: 1fr;
+      gap: 30px 100px;
     }
 
     &__episode {
@@ -83,14 +88,28 @@ header {
       padding: 15px;
       box-shadow: var(--box-shadow);
       background-color: #fff;
+      height: 100%;
+
+      img {
+        @include breakpoint(md) {
+          align-self: start;
+        }
+      }
+
+      &__text {
+        @include breakpoint(sm) {
+          align-self: first baseline;
+          margin-top: -15px;
+        }
+      }
 
       @include breakpoint(lg) {
-        grid-template-columns: 1fr;
+        // grid-template-columns: min-content 3fr;
         gap: 15px;
       }
 
       @include breakpoint(sm) {
-        grid-template-columns: 100px 3fr;
+        grid-template-columns: 60px 3fr;
         gap: 15px;
       }
 
