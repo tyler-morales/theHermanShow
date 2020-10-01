@@ -10,6 +10,18 @@ const TARGET_URL = '/the-herman-show/tracks'
 nightmare
   .goto(BASEURL + TARGET_URL)
   .wait('.sound__body')
+  .scrollTo(99999, 0)
+  .wait(300)
+  .scrollTo(99999, 0)
+  .wait(300)
+  .scrollTo(99999, 0)
+  .wait(300)
+  .scrollTo(99999, 0)
+  .wait(300)
+  .scrollTo(99999, 0)
+  .wait(300)
+  .scrollTo(99999, 0)
+
   .evaluate(() => {
     //get all episodes on a page and filter out the non for sale ones
     let episodes = [...document.querySelectorAll('.sound__body')]
@@ -25,12 +37,14 @@ nightmare
       let year = rawDate.split(' ')[2]
       let date = `${month} ${day}, ${year}`
       let link = episode.querySelector('a.soundTitle__title').href
+      let plays = Number(episode.querySelector('.sc-ministats span:last-child').innerText)
 
       return {
         title,
         date,
         link,
-        index
+        index,
+        plays
       }
     })
     //return the array of objects
@@ -41,7 +55,7 @@ nightmare
     console.log(data);
     //convert to JSON and save as file
     data = JSON.stringify(data, null, 2)
-    fs.writeFileSync('episodes.json', data)
+    fs.writeFileSync('data/episodes.json', data)
   })
   .catch(error => {
     console.error('Scraping failed:', error)

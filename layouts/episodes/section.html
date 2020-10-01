@@ -2,6 +2,7 @@
 <main>
   <section class="episodes container">
     <h2 class="container">Episodes Archive</h2>
+    <ol id="list"></ol>
     <ol class="container recent-episodes__episodes">
       {{ range $.Site.Data.episodes }}
       <a href="{{.link}}">
