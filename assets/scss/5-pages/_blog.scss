@@ -14,9 +14,8 @@
       border: 2px solid rgb(214, 214, 214);
 
       &--img {
-        background-image: url('https://images.unsplash.com/photo-1584541728894-dbcae08f94ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80');
-        background-size: cover;
-        background-position: center center;
+        height: 100%;
+        object-fit: cover;
       }
 
       &__text {

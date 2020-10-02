@@ -2,6 +2,7 @@
 title: "Post Title Goes Here"
 date: 2020-09-14
 draft: false
+image: "/images/radio-bg.jpg"
 description: "A short snippet of a blog post goes here. This can be anything to intrigue the reader"
 tags: ["Interview", "Music"]
 image_description: "An image of a radio show"

@@ -6,7 +6,7 @@
     {{ range sort (where .Pages "Section" "blog") "Date" "desc"}}
     <li>
       <a class='blog__list__item' href="{{ .RelPermalink }}">
-        <div class="blog__list__item--img"></div>
+        <img class='blog__list__item--img' src="{{.Params.image}}" alt="">
         <div class="blog__list__item__text">
           <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
           <h3>{{ .Title }}</h3>
