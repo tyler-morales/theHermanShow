@@ -10,6 +10,15 @@
     margin-right: auto;
 }
 
+main {
+    display: grid;
+    gap: 150px;
+
+    @include breakpoint(sm) {
+        gap: 50px;
+    }
+}
+
 body {
     background-color: var(--background);
 }

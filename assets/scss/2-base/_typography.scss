@@ -21,6 +21,7 @@ a {
 h1 {
     font-size: 72px;
     font-weight: 500;
+    margin-bottom: 10px;
 
     @include breakpoint(md) {
         font-size: 50px;
@@ -65,6 +66,7 @@ h4 {
         font-size: 18px;
         line-height: 20px;
     }
+
     @include breakpoint(sm) {
         font-size: 15px;
         line-height: 20px;

@@ -1,0 +1,43 @@
+.post {
+  margin-top: 40px;
+  max-width: 680px;
+
+  @include breakpoint(md) {
+    max-width: 90vw;
+  }
+
+  header {
+    margin-bottom: 40px;
+
+    h3 {
+      font-weight: 400;
+    }
+
+    .description {
+      margin-bottom: 20px;
+    }
+
+    .post-date {
+      // font-size: 18px;
+    }
+
+    .meta-data {
+      display: flex;
+      flex-direction: column;
+
+      div {
+        display: block;
+      }
+    }
+
+    figure {
+      margin-top: 20px;
+
+      figcaption {
+        margin-top: 10px;
+        text-align: center;
+        font-style: italic;
+      }
+    }
+  }
+}

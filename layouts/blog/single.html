@@ -1,10 +1,26 @@
 {{define "main" }}
-<section class="container">
-  <h1>{{ .Title }}</h1>
-  <p class="date">{{ .PublishDate.Format "January 2, 2006" }}</p>
-  <p class="description">{{ .Params.description }}</p>
-  <article class="content">
-    {{ .Content }}
-  </article>
-</section>
+<main>
+  <section class="container post">
+    <header>
+      <h1>{{ .Title }}</h1>
+      <h3 class="description">{{ .Params.description }}</h3>
+      <div class="meta-data">
+        <span>Brandon Herman</span>
+        <div>
+          <span class="post-date">{{ .PublishDate.Format "January 2, 2006" }} | </span>
+          <span>{{.ReadingTime}} min Read</span>
+        </div>
+      </div>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1565119533262-2c20c8046bf1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+          alt="{{.Params.image_description}}">
+        <figcaption>{{.Params.image_caption}}</figcaption>
+      </figure>
+    </header>
+    <article class="content">
+      {{ .Content }}
+    </article>
+  </section>
+</main>
 {{ end }}

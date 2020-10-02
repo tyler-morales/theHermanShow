@@ -1,13 +1,4 @@
-main {
-  display: grid;
-  gap: 150px;
-
-  @include breakpoint(sm) {
-    gap: 50px;
-  }
-}
-
-header {
+.heading {
   margin-top: 60px;
 
   @include breakpoint(sm) {
