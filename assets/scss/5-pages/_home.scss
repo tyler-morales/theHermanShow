@@ -104,7 +104,6 @@ header {
       }
 
       @include breakpoint(lg) {
-        // grid-template-columns: min-content 3fr;
         gap: 15px;
       }
 

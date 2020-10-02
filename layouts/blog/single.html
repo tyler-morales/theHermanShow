@@ -1,0 +1,10 @@
+{{define "main" }}
+<section class="container">
+  <h1>{{ .Title }}</h1>
+  <p class="date">{{ .PublishDate.Format "January 2, 2006" }}</p>
+  <p class="description">{{ .Params.description }}</p>
+  <article class="content">
+    {{ .Content }}
+  </article>
+</section>
+{{ end }}
