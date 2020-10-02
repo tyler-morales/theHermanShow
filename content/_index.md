@@ -1,6 +1,6 @@
 ---
 title: "The Herman Show | Home"
-draft: true
+draft: false
 stats:
   - number: "7+"
     title: "Years in Radio"
