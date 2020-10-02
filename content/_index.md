@@ -1,5 +1,5 @@
 ---
-title: The Herman Show | Home
+title: 'The Herman Show | Home'
 draft: true
 stats:
   - number: '7+'
