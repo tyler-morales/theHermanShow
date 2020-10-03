@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
   <section class="contact container">
-    <form>
+    <form method="POST" data-netlify="true">
       {{/*  Name  */}}
       <div>
         <label>Your Name:</label>
@@ -16,7 +16,7 @@
       {{/*  Inquiry  */}}
       <div class='inquiry'>
         <label>Inquiry Type:</label>
-        <select name="pets" id="pet-select" class='minimal'>
+        <select name="inquiry_type" multiple class='minimal'>
           <option>Inquiry Type</option>
           <option value="press">🎤 Press</option>
           <option value="general">🗣 General</option>
@@ -26,22 +26,8 @@
       {{/*  Msg  */}}
       <textarea name="text" class="msg" placeholder="Message..."></textarea>
 
-      <button type="submit" value="Submit" />Submit</button>
+      <button type="submit" />Submit</button>
     </form>
-    {{/*  <form name="contact" method="POST" data-netlify="true">
-      <label>Your Name:</label>
-      <input type="text" name="name" />
-      <label>Your Email:</label>
-      <input type="email" name="email" />
-      <label>Inquiry Type:</label>
-      <select name="role[]" multiple>
-        <option value="press">Press</option>
-        <option value="general">General</option>
-      </select>
-      <label>Message:</label>
-      <textarea name="message"></textarea>
-      <button type="submit">Send</button>
-    </form>  */}}
   </section>
 </main>
 {{ end }}
