@@ -11,7 +11,7 @@
     </div>
   </section>
 
-  <section class="about-host container">
+  <section id="host" class="about-host container">
     <h2>About the Host</h2>
     <div class="about-host__grid">
       <img src="/images/brandonHerman.jpg" alt="Profile image of Brandon Herman">
@@ -22,7 +22,7 @@
     </div>
   </section>
 
-  <section class="about-team container">
+  <section id="team" class="about-team container">
     <h2>The Team</h2>
     <div class="about-team__grid">
       {{ range .Params.team }}
@@ -34,7 +34,7 @@
       {{ end }}
   </section>
 
-  <section class="about-contest container">
+  <section id="contests" class="about-contest container">
     <h2>Contest Rules</h2>
     <a href='/docs/contest_rules.pdf' target='_blank' class='link--cta'>View Contest Rules</a>
   </section>

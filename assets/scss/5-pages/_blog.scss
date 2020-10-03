@@ -11,6 +11,7 @@
       display: grid;
       grid-template-columns: 2fr 3fr;
       border: 2px solid rgb(214, 214, 214);
+      box-shadow: var(--box-shadow);
 
       @include breakpoint(sm) {
         grid-template-columns: 1fr
@@ -36,7 +37,7 @@
 
           &--tag {
             padding: 0 15px;
-            font-size: 18px;
+            font-size: 15px;
             color: var(--color-primary);
             border-radius: 15px;
             background-color: rgba(var(--my-color), .1);
