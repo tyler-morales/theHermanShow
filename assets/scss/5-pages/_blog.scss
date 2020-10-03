@@ -10,8 +10,11 @@
     &__item {
       display: grid;
       grid-template-columns: 2fr 3fr;
-
       border: 2px solid rgb(214, 214, 214);
+
+      @include breakpoint(sm) {
+        grid-template-columns: 1fr
+      }
 
       &--img {
         height: 100%;
@@ -27,13 +30,14 @@
 
           @include breakpoint(sm) {
             font-size: 12px;
-            margin-left: 5px;
+            // margin-left: 5px;
           }
         }
 
         .tags {
           display: flex;
           gap: 20px;
+          flex-wrap: wrap;
 
           &--tag {
             padding: 0 15px;
