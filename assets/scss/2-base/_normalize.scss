@@ -10,6 +10,11 @@
     margin-right: auto;
 }
 
+hr {
+    margin: 20px 0;
+    color: var(--color-gray-light);
+}
+
 main {
     display: grid;
     gap: 150px;

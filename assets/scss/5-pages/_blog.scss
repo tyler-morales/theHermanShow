@@ -27,11 +27,6 @@
         span {
           margin-bottom: 4px;
           font-size: 15px;
-
-          @include breakpoint(sm) {
-            font-size: 12px;
-            // margin-left: 5px;
-          }
         }
 
         .tags {
