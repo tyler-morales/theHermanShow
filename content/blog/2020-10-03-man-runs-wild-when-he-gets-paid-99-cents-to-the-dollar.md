@@ -3,7 +3,7 @@ title: Man Runs Wild When He Get's Paid 99 Cents to the Dollar
 date: 2020-10-03T00:10:55.091Z
 description: After much deliberation and debate, men now get paid one penny less
   than they used to
-thumbnail: /images/manontheloose.jpg
+thumbnail: /images/uploads/manontheloose.jpg
 image_alt: Image of an Apple II computer
 image_caption: Image of an Apple II computer
 tags:
