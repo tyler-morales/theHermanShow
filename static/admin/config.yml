@@ -19,3 +19,4 @@ collections:
       - { label: 'Image Caption', name: 'image_caption', widget: 'string' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean' }
