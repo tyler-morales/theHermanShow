@@ -1,7 +1,21 @@
 {{ define "main" }}
 <main>
   <section class="contact container">
-    <form id="form-contact" class="form" name="submit-to-google-sheet">
+    <form name="contact" method="POST" data-netlify="true">
+      <label>Your Name:</label>
+      <input type="text" name="name" />
+      <label>Your Email:</label>
+      <input type="email" name="email" />
+      <label>Inquiry Type:</label>
+      <select name="role[]" multiple>
+        <option value="press">Press</option>
+        <option value="general">General</option>
+      </select>
+      <label>Message:</label>
+      <textarea name="message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    {{/*  <form id="form-contact" class="form" name="submit-to-google-sheet">
 
       <label for="name">Full Name</label>
       <div class="name">
@@ -17,7 +31,7 @@
 
       <button type="submit" id="submit-button" class="link--cta">Submit</button>
 
-    </form>
+    </form>  */}}
   </section>
 </main>
 {{ end }}

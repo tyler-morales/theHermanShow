@@ -1,14 +1,10 @@
 form {
-  max-width: 600px;
+  // max-width: 1000px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   margin-top: 40px;
   width: 100%;
-
-  // @media (max-width:1000px) {
-  //   width: auto;
-  // }
 
   .name {
     display: flex;
