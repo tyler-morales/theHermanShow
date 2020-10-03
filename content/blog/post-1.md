@@ -1,12 +1,12 @@
 ---
 title: "Post Title Goes Here"
 date: 2020-09-14
-draft: false
-image: "/images/radio-bg.jpg"
 description: "A short snippet of a blog post goes here. This can be anything to intrigue the reader"
-tags: ["Interview", "Music"]
-image_description: "An image of a radio show"
+thumbnail: "/images/radio-bg.jpg"
+image_alt: "An image of a radio show"
 image_caption: "This is a caption"
+tags: ["Interview", "Music"]
+draft: false
 ---
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit facilisi commodo in orci, dignissim cursus curae id varius fusce viverra bibendum enim lectus. Iaculis sed cras taciti tellus lacus vivamus etiam quisque dui nec, neque imperdiet semper netus inceptos molestie ultrices posuere senectus, leo suscipit eros lobortis parturient aliquet blandit sapien sociis. Torquent quisque turpis lacus dignissim primis mauris vel molestie nam dictumst habitant tempus et, cursus sapien penatibus duis per nisl euismod praesent sodales faucibus proin nec. Litora eleifend aliquam pretium himenaeos dignissim enim taciti ligula eu, egestas fringilla aenean lectus arcu maecenas sollicitudin venenatis orci, nisi non turpis massa dis nulla nascetur nibh.
