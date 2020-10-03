@@ -1,54 +1,87 @@
 form {
-  // max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  margin-top: 40px;
-  width: 100%;
+  width: 680px;
+  margin: 50px auto;
+  display: grid;
+  gap: 20px;
 
-  .name {
-    display: flex;
-
-    @include breakpoint(sm) {
-      flex-direction: column;
-    }
-
-    input {
-      // width: 50%;
-
-      // @include breakpoint(sm) {
-      //   width: 100%;
-      // }
-    }
+  @include breakpoint(sm) {
+    width: 90vw;
   }
 
-  .btn {
-    margin-top: 35px;
-
-    @include breakpoint(sm) {
-      margin-top: 25px;
-    }
+  label {
+    margin-bottom: 5px;
+    display: block;
   }
 }
 
-input {
-  border-bottom: 1px solid gray;
-  margin: 5px 0 27px 0;
-  padding: 10px 0;
-  background-color: inherit;
-  font-size: 21px;
-
-  @include breakpoint(sm) {
-    margin: 11px 0 27px 0;
-  }
+.msg {
+  font-size: inherit;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 1px solid var(--color-gray-md);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
 }
 
 textarea {
-  margin-top: 20px;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 10px;
-  min-height: 237px;
-  padding: 20px;
-  resize: none;
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: var(--color-primary);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding: 10px 0;
+  transition: all 0.3s;
+}
+
+[type="submit"]:hover {
+  background: rgba(var(--my-color), .2);
+}
+
+.inquiry {
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--color-gray-md);
+    font-size: inherit;
+    border-radius: 5px;
+
+    //remove default arrow
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+select.minimal {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1.15em + 2px),
+    calc(100% - 15px) calc(1.15em + 2px),
+    calc(100% - 2.5em) .5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
 }

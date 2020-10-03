@@ -48,7 +48,9 @@ a {
     color: currentColor;
 }
 
-input {
+input,
+textarea,
+select {
     border: none;
 
     &:active {

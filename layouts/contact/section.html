@@ -1,7 +1,34 @@
 {{ define "main" }}
 <main>
   <section class="contact container">
-    <form name="contact" method="POST" data-netlify="true">
+    <form>
+      {{/*  Name  */}}
+      <div>
+        <label>Your Name:</label>
+        <input name="name" type="text" class="msg" placeholder="Mickey Rooney" />
+      </div>
+      {{/*  Email  */}}
+      <div>
+        <label>Your Email:</label>
+        <input name="email" type="email" class="msg" placeholder="mickeyrooney@gmail.com" />
+      </div>
+
+      {{/*  Inquiry  */}}
+      <div class='inquiry'>
+        <label>Inquiry Type:</label>
+        <select name="pets" id="pet-select" class='minimal'>
+          <option>Inquiry Type</option>
+          <option value="press">🎤 Press</option>
+          <option value="general">🗣 General</option>
+        </select>
+      </div>
+
+      {{/*  Msg  */}}
+      <textarea name="text" class="msg" placeholder="Message..."></textarea>
+
+      <button type="submit" value="Submit" />Submit</button>
+    </form>
+    {{/*  <form name="contact" method="POST" data-netlify="true">
       <label>Your Name:</label>
       <input type="text" name="name" />
       <label>Your Email:</label>
@@ -14,23 +41,6 @@
       <label>Message:</label>
       <textarea name="message"></textarea>
       <button type="submit">Send</button>
-    </form>
-    {{/*  <form id="form-contact" class="form" name="submit-to-google-sheet">
-
-      <label for="name">Full Name</label>
-      <div class="name">
-        <input type="text" placeholder="First" title="First" name="firstName" id="name" required>
-        <input type="text" placeholder="Last" title="Last" name="lastName" id="name" required>
-      </div>
-
-      <label for="email">Email</label>
-      <input type="email" placeholder="johndoe@manifestledger.com" name="email" novalidate="" id="email" required>
-
-      <label for="message">Message</label>
-      <textarea placeholder="Enter your message" title="message" name="message" id="message"></textarea>
-
-      <button type="submit" id="submit-button" class="link--cta">Submit</button>
-
     </form>  */}}
   </section>
 </main>
