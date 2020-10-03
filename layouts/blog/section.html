@@ -10,7 +10,7 @@
         <div class="blog__list__item__text">
           <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
           <h3>{{ .Title }}</h3>
-          <p>{{ .Params.description }}</p>
+          <p>{{ .Params.description | truncate 80 }}</p>
           <ul class='tags'>
             {{ range .Params.tags }}
             <li class="tags--tag">{{ . }}</li>
