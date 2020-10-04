@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+    {{/*  icons  */}}
     <link href='https://css.gg/signal.css' rel='stylesheet'>
+
+    {{/*  Google Maps  */}}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOxUZhQsZyfKQbdQEBoeOvhTSkuITBT1Y&callback=initMap&libraries=&v=weekly" defer>
+    </script>
+    <script src="/js/map.js"></script>
     <!-- sass -->
     {{ $scss := resources.Get "scss/main.scss" }}
     {{ $style := $scss | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
-    
+
     <title>{{ .Page.Title }}</title>
 
 </head>

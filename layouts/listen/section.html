@@ -1,23 +1,8 @@
 {{ define "main" }}
 <main>
-  <section class="episodes container">
-    <h2 class="container">Episodes Archive</h2>
-    <ol id="list"></ol>
-    <ol class="container recent-episodes__episodes">
-      {{ range $.Site.Data.episodes }}
-      <a href="{{.link}}">
-        <li class="recent-episodes__episodes__episode">
-          <img src="https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg" alt="Cover Art" />
-          {{/*  <div class='img'></div>  */}}
-          <div class="recent-episodes__episodes__episode__text">
-            <span class="date">{{ .date }}</span>
-            <h4 class="episode-title">{{ .title }}</h4>
-            <h6 class="plays"><i class="gg-signal"></i> <span>{{.plays}}</span><span>Plays</span></h6>
-          </div>
-        </li>
-      </a>
-      {{ end }}
-    </ol>
+  <section class="listen container">
+    <h2 class="container">Where to Listen</h2>
+    <div id="map"></div>
   </section>
 </main>
 {{ end }}
