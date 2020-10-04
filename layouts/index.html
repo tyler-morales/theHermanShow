@@ -16,7 +16,10 @@
     <ol class="container recent-episodes__episodes">
       {{ range first 6 $.Site.Data.episodes }}
       <li class="recent-episodes__episodes__episode">
-        <img src="https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg" alt="Cover Art" />
+        <img
+          src="https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg"
+          alt="Cover Art"
+        />
         <div class="recent-episodes__episodes__episode__text">
           <span class="date">{{ .date }}</span>
           <h4 class="episode-title">{{ .title }}</h4>
@@ -31,10 +34,22 @@
     <h2>As Seen On</h2>
 
     <div class="as-seen-on__outlets container">
-      <img src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png" alt="" />
-      <img src="https://madebymarycommunity.org/wp-content/uploads/2019/01/DailyHerald-logo.png" alt="" />
-      <img src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png" alt="" />
-      <img src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png" alt="" />
+      <img
+        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
+        alt=""
+      />
+      <img
+        src="https://madebymarycommunity.org/wp-content/uploads/2019/01/DailyHerald-logo.png"
+        alt=""
+      />
+      <img
+        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
+        alt=""
+      />
+      <img
+        src="https://cplfoundation.org/wp-content/uploads/2018/12/Chicago_Tribune_Logo.png"
+        alt=""
+      />
     </div>
   </section>
 
@@ -54,12 +69,22 @@
   <section class="newsletter">
     <form class="container">
       <h3>Sign up for our Monthly Newsletter</h3>
-      <p>{{ .Params.newsletter }}
-      </p>
+      <p>{{ .Params.newsletter }}</p>
 
       <label for="email">
-        <input id="email" name="email" required="" type="email" placeholder="Email">
-        <input class='input--submit' type="submit" value="Join" onclick="submit()">
+        <input
+          id="email"
+          name="email"
+          required=""
+          type="email"
+          placeholder="Email"
+        />
+        <input
+          class="input--submit"
+          type="submit"
+          value="Join"
+          onclick="submit()"
+        />
       </label>
     </form>
   </section>
