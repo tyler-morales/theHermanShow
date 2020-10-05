@@ -3,6 +3,14 @@
   <section class="listen container">
     <h2 class="container">Where to Listen</h2>
     <div id="map"></div>
+    <ol class="stations">
+      {{ range $.Site.Data.stations }}
+      <li class="stations__item">
+          <span class="stations__item--name">{{ .name }}</span>
+          <h4 class="stations__item--location">{{ .location }}</h4>
+          <span class="stations__item--time">{{ .time }}</span>
+      </li>
+      {{ end }}
   </section>
 </main>
 {{ end }}

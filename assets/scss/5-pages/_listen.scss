@@ -1,6 +1,38 @@
 .listen {
   margin-top: 40px;
 
+  .stations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+
+    @include breakpoint(sm) {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      display: grid;
+      // grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      border: 1px solid var(--color-primary);
+      padding: 10px;
+      border-radius: 8px;
+
+      &--name {
+        font-weight: 500;
+      }
+
+      &--time {
+        color: var(--color-primary);
+        background-color: rgba(var(--my-color), .1);
+        text-align: center;
+        border-radius: 8px;
+        padding: 5px;
+      }
+    }
+
+  }
 }
 
 #map {
