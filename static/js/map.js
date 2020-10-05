@@ -144,14 +144,16 @@ function initMap() {
   });
 
   // Info window content
-  let infoWindowContent = [
-    [
-      '<div class="info_content">' +
-      `<h3>name</h3>` +
-      '<p>The Brooklyn Museum is an art museum located in the New York City borough of Brooklyn.</p>' +
-      '</div>'
-    ]
-  ];
+  let infoWindowContent = []
+  stations.forEach((station) => {
+    infoWindowContent.push([
+      `
+      <div class="info_content">
+      <h5>${station.name}</h5>
+      <span>${station.time}</span>
+      `
+    ]);
+  });
 
   // Add multiple markers to map
   let infoWindow = new google.maps.InfoWindow(),
