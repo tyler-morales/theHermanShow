@@ -12,6 +12,7 @@
       grid-template-columns: 2fr 3fr;
       border: 2px solid rgb(214, 214, 214);
       box-shadow: var(--box-shadow);
+      border-radius: 10px;
 
       @include breakpoint(sm) {
         grid-template-columns: 1fr
@@ -20,6 +21,7 @@
       &--img {
         height: 100%;
         object-fit: cover;
+        border-radius: 10px 0 0 10px;
       }
 
       &__text {
